@@ -7,11 +7,11 @@ import {
 
 export default function Home() {
   return (
-    <main className="w-full overflow-hidden">
+    <main className="w-full overflow-hidden bg-black">
 
       {/* SECTION 1 */}
       <section
-        className="relative min-h-screen bg-cover bg-[28%_center] md:bg-center flex items-start justify-center pt-6 md:pt-16 px-4"
+        className="relative min-h-screen bg-contain md:bg-cover bg-no-repeat bg-top md:bg-center flex items-start justify-center pt-6 md:pt-16 px-4"
         style={{ backgroundImage: "url('/background.png')" }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
@@ -23,7 +23,6 @@ export default function Home() {
 
         <div className="flex flex-col items-center relative z-10 w-full">
           <div className="text-center text-white backdrop-blur-md bg-black/25 px-5 md:px-10 py-6 md:py-8 rounded-3xl w-full max-w-[92vw] md:max-w-3xl mx-0 md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn hover:scale-[1.02] transition duration-500">
-
             <h1 className="text-4xl md:text-6xl font-bold mb-5 md:mb-6">
               Hase Schlummer
             </h1>
@@ -31,20 +30,14 @@ export default function Home() {
             <p className="text-base md:text-xl leading-7 md:leading-9">
               Willkommen im Traumland von Hase Schlummer. 🌙
               <br /><br />
-
               Wenn der Abend leise wird und die Sterne am Himmel funkeln,<br />
               beginnt für Hase Schlummer ein neues Abenteuer.<br />
-
               Gemeinsam mit seinen Freunden Fips und Piko erlebt er
               lustige und chaotische Geschichten tief im Zauberwald.<br />
-
               <br />
               🌲 Eine kleine Welt zum Träumen.<br /><br />
-
               Der Zauberwald ist voller geheimer Orte.<br />
-
               Hier erleben Schlummer und seine Freunde Abenteuer voller Fantasie, Freundschaft und Wärme — fern vom hektischen Alltag.<br /><br />
-
               Lehn dich zurück, hör den Geschichten zu und lass dich ins Traumland begleiten. ✨
             </p>
 
@@ -61,7 +54,7 @@ export default function Home() {
 
       {/* SECTION 2 */}
       <section
-        className="relative min-h-screen bg-cover bg-[58%_center] md:bg-center flex items-start justify-center pt-6 md:pt-16 px-4"
+        className="relative min-h-screen bg-contain md:bg-cover bg-no-repeat bg-top md:bg-center flex items-start justify-center pt-6 md:pt-16 px-4"
         style={{ backgroundImage: "url('/background2.png')" }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
@@ -92,7 +85,7 @@ export default function Home() {
 
       {/* SECTION 3 */}
       <section
-        className="relative min-h-screen bg-cover bg-[52%_center] md:bg-center flex items-start justify-center pt-6 md:pt-16 px-4"
+        className="relative min-h-screen bg-contain md:bg-cover bg-no-repeat bg-top md:bg-center flex items-start justify-center pt-6 md:pt-16 px-4"
         style={{ backgroundImage: "url('/background3.png')" }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
