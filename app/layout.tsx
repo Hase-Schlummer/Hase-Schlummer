@@ -33,9 +33,9 @@ export default function RootLayout({
 }
 
 export const viewport = {
-  width: 1920,
+  width: "device-width",
   initialScale: 0.2,
-  minimumScale: 0.2,
-  maximumScale: 3,
+  minimumScale: 0.1,
+  maximumScale: 5,
   userScalable: true,
 };

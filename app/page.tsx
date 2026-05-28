@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <main className="w-full overflow-auto bg-black">
 
-      <div className="w-[1920px] min-h-screen">
+      <div className="min-w-[1920px] min-h-screen">
 
         {/* SECTION 1 */}
         <section
-          className="relative h-screen w-[1920px] bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative h-screen min-w-[1920px] bg-cover bg-center flex items-start justify-center pt-16"
           style={{
             backgroundImage: "url('/background.png')",
           }}
@@ -65,7 +65,7 @@ export default function Home() {
 
         {/* SECTION 2 */}
         <section
-          className="relative h-screen w-[1920px] bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative h-screen min-w-[1920px] bg-cover bg-center flex items-start justify-center pt-16"
           style={{
             backgroundImage: "url('/background2.png')",
           }}
@@ -102,7 +102,7 @@ export default function Home() {
 
         {/* SECTION 3 */}
         <section
-          className="relative h-screen w-[1920px] bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative h-screen min-w-[1920px] bg-cover bg-center flex items-start justify-center pt-16"
           style={{
             backgroundImage: "url('/background3.png')",
           }}
