@@ -31,3 +31,11 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const viewport = {
+  width: 1920,
+  initialScale: 0.2,
+  minimumScale: 0.2,
+  maximumScale: 3,
+  userScalable: true,
+};
