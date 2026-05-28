@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="overflow-auto bg-black">
 
-      <div className="w-[1920px] min-h-screen">
+      <div className="w-[2400px] min-h-screen scale-[0.8] origin-top-left">
 
         {/* SECTION 1 */}
         <section
