@@ -137,6 +137,10 @@ useEffect(() => {
             oder entdeckt geheimnisvolle Dinge,
             die er eigentlich lieber nicht hätte anfassen sollen.<br /><br />
 
+            Zusammen mit Hase Schlummer erlebt Fips
+            fast jeden Abend neue Abenteuer im Zauberwald und während Schlummer oft noch vorsichtig nachdenkt,
+            ist Fips meistens schon längst losgerannt.<br /><br />
+
             Doch mit seiner lustigen Art sorgt Fips
             immer für Chaos, Abenteuer und jede Menge Lachen. ✨
             </p>
@@ -171,6 +175,16 @@ useEffect(() => {
 
               In seiner kleinen Werkstatt baut,
               repariert und erfindet er die unterschiedlichsten Dinge.<br /><br />
+
+              Zwischen Holzspänen, Werkzeugen,
+              alten Laternen und seltsamen Skizzen
+              arbeitet Piko oft stundenlang an neuen Ideen.<br /><br />
+
+              Wenn irgendwo etwas kaputtgeht,
+              ein Wagen stecken bleibt
+              oder plötzlich mitten im Wald
+              ein seltsames Problem auftaucht,
+              hat Piko meistens schon eine Idee parat.<br /><br />
 
               Während Fips meistens Unsinn macht
               und Schlummer langsam nervös wird,
