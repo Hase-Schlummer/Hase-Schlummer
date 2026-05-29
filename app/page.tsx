@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import {
   FaSpotify,
   FaYoutube,
@@ -6,12 +8,47 @@ import {
 } from "react-icons/fa";
 
 export default function Home() {
+
+  const [activeSection, setActiveSection] = useState(1);
+
+    useEffect(() => {
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const sectionHeight = window.innerHeight;
+    const current = Math.round(scrollY / sectionHeight) + 1;
+
+    setActiveSection(current);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+useEffect(() => {
+  const elements = document.querySelectorAll(".scroll-fade");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
   return (
     <main className="overflow-auto bg-black">
-      <div className="w-[1920px] min-h-screen">
+      <div className="w-[1920px] min-h-screen scale-[0.65] md:scale-100 origin-top-left">
 
         {/* SECTION 1 */}
-        <section
+        <section id="section1"
           className="relative h-screen bg-cover bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background.png')" }}
         >
@@ -23,7 +60,14 @@ export default function Home() {
           <div className="absolute top-40 right-32 text-2xl animate-bounce">⭐</div>
           <div className="absolute bottom-32 left-1/3 text-xl animate-ping">✦</div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-3xl mx-6 shadow-2xl ml-150">
+          {/* Glühwürmchen */}
+          <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
+          <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
+
+        
+
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-3xl mx-6 shadow-2xl ml-150 animate-fadeIn">
             <h1 className="text-6xl font-bold mb-6">
               Hase Schlummer
             </h1>
@@ -60,7 +104,7 @@ export default function Home() {
         </section>
 
         {/* SECTION 2 */}
-        <section
+        <section id="section2"
           className="relative h-screen bg-cover bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background2.png')" }}
         >
@@ -72,7 +116,12 @@ export default function Home() {
           <div className="absolute bottom-40 right-40 text-xl animate-ping">✦</div>
           <div className="absolute top-1/2 left-20 text-2xl animate-bounce">🍃</div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl mr-200">
+          {/* Glühwürmchen */}
+          <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
+          <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
+
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl mr-200 scroll-fade">
             <h2 className="text-5xl font-bold mb-6">
               Fips 🐿️
             </h2>
@@ -95,7 +144,7 @@ export default function Home() {
         </section>
 
         {/* SECTION 3 */}
-        <section
+        <section id="section3"
           className="relative h-screen bg-cover bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background3.png')" }}
         >
@@ -107,7 +156,12 @@ export default function Home() {
           <div className="absolute bottom-40 left-40 text-xl animate-ping">✦</div>
           <div className="absolute top-1/2 right-20 text-2xl animate-bounce">🍂</div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl ml-150">
+          {/* Glühwürmchen */}
+          <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
+          <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
+
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl ml-150 scroll-fade">
             <h2 className="text-5xl font-bold mb-6">
               Piko 🦔
             </h2>
@@ -130,7 +184,7 @@ export default function Home() {
         </section>
 
         {/* SECTION 4 */}
-        <section
+        <section id="section4"
           className="relative h-screen bg-cover bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background4.png')" }}
         >
@@ -142,7 +196,12 @@ export default function Home() {
           <div className="absolute bottom-40 right-48 text-xl animate-ping">✦</div>
           <div className="absolute top-1/2 left-24 text-2xl animate-bounce">💌</div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl">
+          {/* Glühwürmchen */}
+          <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
+          <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
+
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl scroll-fade">
             <h2 className="text-5xl font-bold mb-6">
               Deine Meinung zählt 💌
             </h2>
@@ -180,6 +239,44 @@ export default function Home() {
         </section>
 
       </div>
+
+      {/* SECTION NAV */}
+        <div className="fixed left-6 top-1/2 -translate-y-1/2 z-[9999] flex flex-col gap-5 bg-white/10 backdrop-blur-md px-3 py-4 rounded-full border border-white/20">
+
+          <div
+            className={`w-4 h-4 rounded-full transition duration-300 ${
+              activeSection === 1
+                ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
+                : "bg-white/40"
+            }`}
+          />
+
+          <div
+            className={`w-4 h-4 rounded-full transition duration-300 ${
+              activeSection === 2
+                ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
+                : "bg-white/40"
+            }`}
+          />
+
+          <div
+            className={`w-4 h-4 rounded-full transition duration-300 ${
+              activeSection === 3
+                ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
+                : "bg-white/40"
+            }`}
+          />
+
+          <div
+            className={`w-4 h-4 rounded-full transition duration-300 ${
+              activeSection === 4
+                ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
+                : "bg-white/40"
+            }`}
+          />
+
+        </div>
+
 
       {/* SOCIAL BAR */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
