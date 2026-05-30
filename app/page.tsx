@@ -112,9 +112,10 @@ useEffect(() => {
           <div className="absolute inset-0 shadow-[inset_0_0_180px_60px_rgba(0,0,0,0.45)]"></div>
 
           {/* STARS */}
-          <div className="absolute top-24 left-24 text-2xl animate-pulse">✨</div>
-          <div className="absolute bottom-40 right-40 text-xl animate-ping">✦</div>
-          <div className="absolute top-1/2 left-20 text-2xl animate-bounce">🍃</div>
+          <div className="absolute top-20 left-20 text-3xl animate-pulse">✨</div>
+          <div className="absolute top-40 right-32 text-2xl animate-bounce">⭐</div>
+          <div className="absolute bottom-32 left-1/3 text-xl animate-ping">✦</div>
+          
 
           {/* Glühwürmchen */}
           <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
@@ -156,9 +157,10 @@ useEffect(() => {
           <div className="absolute inset-0 shadow-[inset_0_0_180px_60px_rgba(0,0,0,0.45)]"></div>
 
           {/* STARS */}
-          <div className="absolute top-24 right-24 text-2xl animate-pulse">✨</div>
-          <div className="absolute bottom-40 left-40 text-xl animate-ping">✦</div>
-          <div className="absolute top-1/2 right-20 text-2xl animate-bounce">🍂</div>
+          <div className="absolute top-20 left-20 text-3xl animate-pulse">✨</div>
+          <div className="absolute top-40 right-32 text-2xl animate-bounce">⭐</div>
+          <div className="absolute bottom-32 left-1/3 text-xl animate-ping">✦</div>
+          
 
           {/* Glühwürmchen */}
           <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
@@ -206,9 +208,10 @@ useEffect(() => {
           <div className="absolute inset-0 shadow-[inset_0_0_180px_60px_rgba(0,0,0,0.5)]"></div>
 
           {/* STARS */}
-          <div className="absolute top-24 left-32 text-2xl animate-pulse">✨</div>
-          <div className="absolute bottom-40 right-48 text-xl animate-ping">✦</div>
-          <div className="absolute top-1/2 left-24 text-2xl animate-bounce">💌</div>
+          <div className="absolute top-20 left-20 text-3xl animate-pulse">✨</div>
+          <div className="absolute top-40 right-32 text-2xl animate-bounce">⭐</div>
+          <div className="absolute bottom-32 left-1/3 text-xl animate-ping">✦</div>
+          
 
           {/* Glühwürmchen */}
           <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
