@@ -49,7 +49,7 @@ useEffect(() => {
 
         {/* SECTION 1 */}
         <section id="section1"
-          className="relative h-screen bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -67,12 +67,12 @@ useEffect(() => {
 
         
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn">
             <h1 className="text-6xl font-bold mb-6">
               Hase Schlummer
             </h1>
 
-            <p className="text-xl leading-9">
+            <p className="text-sm md:text-xl leading-6 md:leading-9">
               Willkommen im Traumland von Hase Schlummer. 🌙
                 <br /><br />
 
@@ -105,7 +105,7 @@ useEffect(() => {
 
         {/* SECTION 2 */}
         <section id="section2"
-          className="relative h-screen bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background2.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -122,12 +122,12 @@ useEffect(() => {
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl mr-200 scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl mr-200 scroll-fade">
             <h2 className="text-5xl font-bold mb-6">
               Fips 🐿️
             </h2>
 
-            <p className="text-xl leading-9">
+            <p className="text-sm md:text-xl leading-6 md:leading-9">
             Fips ist wild, neugierig und voller verrückter Ideen.<br /><br />
 
             Oft bringt er sich selbst in Schwierigkeiten —
@@ -150,7 +150,7 @@ useEffect(() => {
 
         {/* SECTION 3 */}
         <section id="section3"
-          className="relative h-screen bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background3.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -167,12 +167,12 @@ useEffect(() => {
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 scroll-fade">
             <h2 className="text-5xl font-bold mb-6">
               Piko 🦔
             </h2>
 
-            <p className="text-xl leading-9">
+            <p className="text-sm md:text-xl leading-6 md:leading-9">
               Piko ist der ruhige Tüftler im Zauberwald.<br /><br />
 
               In seiner kleinen Werkstatt baut,
@@ -201,7 +201,7 @@ useEffect(() => {
 
         {/* SECTION 4 */}
         <section id="section4"
-          className="relative h-screen bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background4.png')" }}
         >
           <div className="absolute inset-0 bg-black/25"></div>
@@ -218,12 +218,12 @@ useEffect(() => {
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[3px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade">
             <h2 className="text-5xl font-bold mb-6">
               Deine Meinung zählt 💌
             </h2>
 
-            <p className="text-xl leading-9">
+            <p className="text-sm md:text-xl leading-6 md:leading-9">
               Hase Schlummer wächst mit jeder Geschichte weiter.
               <br /><br />
 
