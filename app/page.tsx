@@ -45,7 +45,7 @@ useEffect(() => {
 }, []);
   return (
     <main className="overflow-auto bg-black">
-      <div className="w-[1920px] min-h-screen scale-[0.55] md:scale-100 origin-top-left">
+      <div className="w-full min-h-screen scale-[0.55] md:scale-100 origin-top-left">
 
         {/* SECTION 1 */}
         <section id="section1"
