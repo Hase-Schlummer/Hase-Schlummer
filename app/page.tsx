@@ -44,7 +44,7 @@ useEffect(() => {
   return () => observer.disconnect();
 }, []);
   return (
-    <main className="overflow-auto bg-black">
+    <main className="bg-black overflow-x-hidden">
       <div className="w-full min-h-screen">
 
         {/* SECTION 1 */}
