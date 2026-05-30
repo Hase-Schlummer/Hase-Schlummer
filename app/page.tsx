@@ -214,8 +214,8 @@ useEffect(() => {
           
 
           {/* Glühwürmchen */}
-          <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
-          <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
+          <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[3px]"></div>
+          <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[3px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
           <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl scroll-fade">
