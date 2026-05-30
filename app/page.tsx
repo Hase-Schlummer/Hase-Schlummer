@@ -68,7 +68,7 @@ useEffect(() => {
         
 
           <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn">
-            <h1 className="text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Hase Schlummer
             </h1>
 
@@ -96,7 +96,7 @@ useEffect(() => {
               href="https://open.spotify.com/show/5LG7hNPp05pUnwBzq43p4R"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-8 bg-green-500 hover:bg-green-400 hover:scale-105 transition px-8 py-4 rounded-full text-xl font-bold text-white shadow-2xl"
+              className="inline-block mt-8 bg-green-500 hover:bg-green-400 hover:scale-105 transition px-5 py-3 md:px-8 md:py-4 rounded-full text-xl font-bold text-white shadow-2xl"
             >
               Jetzt auf Spotify hören
             </a>
@@ -122,8 +122,8 @@ useEffect(() => {
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl mr-200 scroll-fade">
-            <h2 className="text-5xl font-bold mb-6">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl mr-0 md:mr-200 scroll-fade">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Fips 🐿️
             </h2>
 
@@ -168,7 +168,7 @@ useEffect(() => {
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
           <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 scroll-fade">
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Piko 🦔
             </h2>
 
@@ -219,7 +219,7 @@ useEffect(() => {
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
           <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade">
-            <h2 className="text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Deine Meinung zählt 💌
             </h2>
 
@@ -258,7 +258,7 @@ useEffect(() => {
       </div>
 
       {/* SECTION NAV */}
-        <div className="fixed left-6 top-1/2 -translate-y-1/2 z-[9999] flex flex-col gap-5 bg-white/10 backdrop-blur-md px-3 py-4 rounded-full border border-white/20">
+        <div className="fixed left-3 md:left-6 top-1/2 -translate-y-1/2 z-[9999] flex flex-col gap-5 bg-white/10 backdrop-blur-md px-3 py-4 rounded-full border border-white/20">
 
           <div
             className={`w-4 h-4 rounded-full transition duration-300 ${
@@ -297,13 +297,13 @@ useEffect(() => {
 
       {/* SOCIAL BAR */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-        <div className="flex items-center gap-6 backdrop-blur-md bg-black/40 border border-white/10 px-8 py-4 rounded-full shadow-2xl">
+        <div className="flex items-center gap-4 md:gap-6 backdrop-blur-md bg-black/40 border border-white/10 px-5 py-3 md:px-8 md:py-4 rounded-full shadow-2xl">
 
           <a
             href="https://open.spotify.com/show/5LG7hNPp05pUnwBzq43p4R"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-400 text-3xl hover:scale-125 transition duration-300"
+            className="text-green-400 text-2xl md:text-3xl hover:scale-125 transition duration-300"
           >
             <FaSpotify />
           </a>
