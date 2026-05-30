@@ -45,7 +45,7 @@ useEffect(() => {
 }, []);
   return (
     <main className="overflow-auto bg-black">
-      <div className="w-full min-h-screen scale-[0.55] md:scale-100 origin-top-left">
+      <div className="w-full min-h-screen">
 
         {/* SECTION 1 */}
         <section id="section1"
@@ -67,7 +67,7 @@ useEffect(() => {
 
         
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-3xl mx-6 shadow-2xl ml-150 animate-fadeIn">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn">
             <h1 className="text-6xl font-bold mb-6">
               Hase Schlummer
             </h1>
@@ -167,7 +167,7 @@ useEffect(() => {
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl ml-150 scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 scroll-fade">
             <h2 className="text-5xl font-bold mb-6">
               Piko 🦔
             </h2>
@@ -214,11 +214,11 @@ useEffect(() => {
           
 
           {/* Glühwürmchen */}
-          <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[3px]"></div>
+          <div className="absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[3px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl max-w-2xl mx-6 shadow-2xl scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-10 py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade">
             <h2 className="text-5xl font-bold mb-6">
               Deine Meinung zählt 💌
             </h2>
