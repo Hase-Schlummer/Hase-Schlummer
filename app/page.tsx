@@ -258,7 +258,7 @@ useEffect(() => {
       </div>
 
       {/* SECTION NAV */}
-        <div className="fixed left-3 md:left-6 top-1/2 -translate-y-1/2 z-[9999] flex flex-col gap-5 bg-white/10 backdrop-blur-md px-3 py-4 rounded-full border border-white/20">
+        <div className="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-[9999] flex-col gap-5 bg-white/10 backdrop-blur-md px-3 py-4 rounded-full border border-white/20">
 
           <div
             className={`w-4 h-4 rounded-full transition duration-300 ${
