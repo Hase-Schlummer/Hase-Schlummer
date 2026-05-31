@@ -71,7 +71,7 @@ useEffect(() => {
 
         
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn touch-pan-y">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150  touch-pan-y">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Hase Schlummer
             </h1>
