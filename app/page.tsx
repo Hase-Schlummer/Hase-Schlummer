@@ -53,7 +53,7 @@ useEffect(() => {
 
         {/* SECTION 1 */}
         <section id="section1"
-          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16 touch-pan-y"
           style={{ backgroundImage: "url('/background.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -109,7 +109,7 @@ useEffect(() => {
 
         {/* SECTION 2 */}
         <section id="section2"
-          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16 touch-pan-y"
           style={{ backgroundImage: "url('/background2.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -128,7 +128,7 @@ useEffect(() => {
 
           <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl mr-0 md:mr-200 scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
-              Fips 🐿️
+              Fips
             </h2>
 
             <p className="text-sm md:text-xl leading-6 md:leading-9">
@@ -154,7 +154,7 @@ useEffect(() => {
 
         {/* SECTION 3 */}
         <section id="section3"
-          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16 touch-pan-y"
           style={{ backgroundImage: "url('/background3.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -173,7 +173,7 @@ useEffect(() => {
 
           <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
-              Piko 🦔
+              Piko
             </h2>
 
             <p className="text-sm md:text-xl leading-6 md:leading-9">
@@ -205,7 +205,7 @@ useEffect(() => {
 
         {/* SECTION 4 */}
         <section id="section4"
-          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16 touch-pan-y"
           style={{ backgroundImage: "url('/background4.png')" }}
         >
           <div className="absolute inset-0 bg-black/25"></div>
@@ -224,7 +224,7 @@ useEffect(() => {
 
           <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
-              Deine Meinung zählt 💌
+              Deine Meinung zählt!
             </h2>
 
             <p className="text-sm md:text-xl leading-6 md:leading-9">
