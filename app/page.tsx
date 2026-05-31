@@ -44,7 +44,7 @@ useEffect(() => {
   return () => observer.disconnect();
 }, []);
   return (
-    <main className="bg-black overflow-x-hidden">
+    <main className="bg-black overflow-x-hidden touch-pan-y">
       <div className="w-full min-h-screen">
 
         {/* SECTION 1 */}
@@ -67,7 +67,7 @@ useEffect(() => {
 
         
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn touch-pan-y">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Hase Schlummer
             </h1>
@@ -122,7 +122,7 @@ useEffect(() => {
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl mr-0 md:mr-200 scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl mr-0 md:mr-200 scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Fips 🐿️
             </h2>
@@ -167,7 +167,7 @@ useEffect(() => {
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Piko 🦔
             </h2>
@@ -218,7 +218,7 @@ useEffect(() => {
           <div className="absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[3px]"></div>
           <div className="absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Deine Meinung zählt 💌
             </h2>
