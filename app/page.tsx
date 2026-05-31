@@ -12,17 +12,21 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState(1);
 
     useEffect(() => {
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const sectionHeight = window.innerHeight;
-    const current = Math.round(scrollY / sectionHeight) + 1;
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
-    setActiveSection(current);
-  };
+    if (!isDesktop) return;
 
-  window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const sectionHeight = window.innerHeight;
+      const current = Math.round(scrollY / sectionHeight) + 1;
 
-  return () => window.removeEventListener("scroll", handleScroll);
+      setActiveSection(Math.min(Math.max(current, 1), 4));
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
 }, []);
 
 useEffect(() => {
