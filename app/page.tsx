@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaInstagram,
   FaTiktok,
+  FaPatreon,
 } from "react-icons/fa";
 
 export default function Home() {
@@ -256,6 +257,18 @@ useEffect(() => {
             >
               Feedback per E-Mail senden
             </a>
+
+            <br />
+
+            <a
+              href="https://www.patreon.com/HaseSchlummer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 bg-orange-500 hover:bg-orange-400 hover:scale-105 transition px-8 py-4 rounded-full text-xl font-bold text-white shadow-2xl"
+            >
+              Hase Schlummer unterstützen ❤️
+            </a>
+
           </div>
         </section>
 
@@ -337,6 +350,15 @@ useEffect(() => {
             className="text-white text-3xl hover:scale-125 transition duration-300"
           >
             <FaTiktok />
+          </a>
+
+          <a
+            href="https://www.patreon.com/HaseSchlummer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-400 text-3xl hover:scale-125 transition duration-300"
+          >
+            <FaPatreon />
           </a>
 
         </div>
