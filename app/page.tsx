@@ -12,7 +12,37 @@ export default function Home() {
 
   const [activeSection, setActiveSection] = useState(1);
 
-    useEffect(() => {
+  // MOBILE: exakt zur nächsten/vorherigen Section scrollen
+  const scrollSection = (direction: "up" | "down") => {
+    const sections = [1, 2, 3, 4]
+      .map((number) => document.getElementById(`section${number}`))
+      .filter((section): section is HTMLElement => section !== null);
+
+    if (sections.length === 0) return;
+
+    const currentIndex = sections.reduce((closestIndex, section, index) => {
+      const currentDistance = Math.abs(
+        sections[closestIndex].getBoundingClientRect().top
+      );
+      const newDistance = Math.abs(
+        section.getBoundingClientRect().top
+      );
+
+      return newDistance < currentDistance ? index : closestIndex;
+    }, 0);
+
+    const nextIndex =
+      direction === "down"
+        ? Math.min(currentIndex + 1, sections.length - 1)
+        : Math.max(currentIndex - 1, 0);
+
+    sections[nextIndex].scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  useEffect(() => {
     const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
     if (!isDesktop) return;
@@ -28,33 +58,35 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+  }, []);
 
-useEffect(() => {
-  const elements = document.querySelectorAll(".scroll-fade");
+  useEffect(() => {
+    const elements = document.querySelectorAll(".scroll-fade");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    },
-    { threshold: 0.25 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
 
-  elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="bg-black overflow-x-hidden touch-pan-y">
       <div className="w-full min-h-screen">
 
         {/* SECTION 1 */}
-        <section id="section1"
-          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16 touch-pan-y"
+        <section
+          id="section1"
+          className="relative min-h-screen bg-cover bg-[position:25%_center] md:bg-center flex items-start justify-center pt-16 touch-pan-y"
           style={{ backgroundImage: "url('/background.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -70,32 +102,26 @@ useEffect(() => {
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-        
-
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 animate-fadeIn touch-pan-y">
+          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl md:ml-150 animate-fadeIn touch-pan-y">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Hase Schlummer
             </h1>
 
             <p className="text-sm md:text-xl leading-6 md:leading-9">
               Willkommen im Traumland von Hase Schlummer. 🌙
-                <br /><br />
+              <br />
 
-                Wenn der Abend leise wird und die Sterne am Himmel funkeln,<br />
-                beginnt für Hase Schlummer ein neues Abenteuer.<br />
+              Wenn der Abend leise wird und die Sterne am Himmel funkeln,
+              beginnt für Hase Schlummer ein neues Abenteuer.<br />
 
-                Gemeinsam mit seinen Freunden Fips und Piko erlebt er
-                lustige und chaotische Geschichten tief im Zauberwald.<br />
+              Hier erleben Schlummer und seine Freunde Abenteuer voller Fantasie und Freundschaft.<br /><br />
 
-                <br />
-                🌲 Eine kleine Welt zum Träumen.<br /><br />
-
-                Der Zauberwald ist voller geheimer Orte.<br />
-
-                Hier erleben Schlummer und seine Freunde Abenteuer voller Fantasie, Freundschaft und Wärme — fern vom hektischen Alltag.<br /><br />
-
-                Lehn dich zurück, hör den Geschichten zu und lass dich ins Traumland begleiten. ✨
+              Lehn dich zurück, hör den Geschichten zu und lass dich ins Traumland begleiten. ✨
             </p>
+
+            <span className="md:hidden">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              </span>
 
             <a
               href="https://open.spotify.com/show/5LG7hNPp05pUnwBzq43p4R"
@@ -108,9 +134,11 @@ useEffect(() => {
           </div>
         </section>
 
+
         {/* SECTION 2 */}
-        <section id="section2"
-          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16 touch-pan-y"
+        <section
+          id="section2"
+          className="relative min-h-screen bg-cover bg-[position:65%_center] md:bg-center flex items-start justify-center pt-16 touch-pan-y"
           style={{ backgroundImage: "url('/background2.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -120,42 +148,48 @@ useEffect(() => {
           <div className="hidden md:block absolute top-20 left-20 text-3xl animate-pulse">✨</div>
           <div className="hidden md:block absolute top-40 right-32 text-2xl animate-bounce">⭐</div>
           <div className="hidden md:block absolute bottom-32 left-1/3 text-xl animate-ping">✦</div>
-          
 
           {/* Glühwürmchen */}
           <div className="hidden md:block absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl mr-0 md:mr-200 scroll-fade touch-pan-y">
+          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:mr-200 scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Fips
             </h2>
 
             <p className="text-sm md:text-xl leading-6 md:leading-9">
-            Fips ist wild, neugierig und voller verrückter Ideen.<br /><br />
+              Fips ist wild, neugierig und voller verrückter Ideen.<br />
 
-            Oft bringt er sich selbst in Schwierigkeiten —
-            meistens aus Versehen.<br /><br />
+              Oft bringt er sich selbst in Schwierigkeiten —
+              meistens aus Versehen.<br />
 
-            Mal hängt er kopfüber an einem Ast,
-            mal verirrt er sich mitten im dunklen Wald
-            oder entdeckt geheimnisvolle Dinge,
-            die er eigentlich lieber nicht hätte anfassen sollen.<br /><br />
 
-            Zusammen mit Hase Schlummer erlebt Fips
-            fast jeden Abend neue Abenteuer im Zauberwald und während Schlummer oft noch vorsichtig nachdenkt,
-            ist Fips meistens schon längst losgerannt.<br /><br />
+              Mal hängt er kopfüber an einem Ast,
+              mal verirrt er sich mitten im dunklen Wald
+              oder entdeckt geheimnisvolle Dinge,
+              die er eigentlich lieber nicht hätte anfassen sollen.<br /><br />
 
-            Doch mit seiner lustigen Art sorgt Fips
-            immer für Chaos, Abenteuer und jede Menge Lachen. ✨
+              <span className="md:hidden">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br />
+              </span>
+
+              Zusammen mit Hase Schlummer erlebt Fips
+              fast jeden Abend neue Abenteuer im Zauberwald und während Schlummer oft noch vorsichtig nachdenkt,
+              ist Fips meistens schon längst losgerannt.<br /><br />
+
+              Doch mit seiner lustigen Art sorgt Fips
+              immer für Chaos, Abenteuer und jede Menge Lachen. ✨
             </p>
           </div>
         </section>
 
+
         {/* SECTION 3 */}
-        <section id="section3"
-          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16 touch-pan-y"
+        <section
+          id="section3"
+          className="relative min-h-screen bg-cover bg-[position:40%_center] md:bg-center flex items-start justify-center pt-16 touch-pan-y"
           style={{ backgroundImage: "url('/background3.png')" }}
         >
           <div className="absolute inset-0 bg-black/20"></div>
@@ -165,14 +199,13 @@ useEffect(() => {
           <div className="hidden md:block absolute top-20 left-20 text-3xl animate-pulse">✨</div>
           <div className="hidden md:block absolute top-40 right-32 text-2xl animate-bounce">⭐</div>
           <div className="hidden md:block absolute bottom-32 left-1/3 text-xl animate-ping">✦</div>
-          
 
           {/* Glühwürmchen */}
           <div className="hidden md:block absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl ml-0 md:ml-150 scroll-fade touch-pan-y">
+          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:ml-150 scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Piko
             </h2>
@@ -186,6 +219,10 @@ useEffect(() => {
               Zwischen Holzspänen, Werkzeugen,
               alten Laternen und seltsamen Skizzen
               arbeitet Piko oft stundenlang an neuen Ideen.<br /><br />
+
+              <span className="md:hidden">
+                <br /><br /><br /><br /><br /><br />
+              </span>
 
               Wenn irgendwo etwas kaputtgeht,
               ein Wagen stecken bleibt
@@ -204,9 +241,11 @@ useEffect(() => {
           </div>
         </section>
 
+
         {/* SECTION 4 */}
-        <section id="section4"
-          className="relative min-h-screen bg-cover bg-center flex items-start justify-center pt-16 touch-pan-y"
+        <section
+          id="section4"
+          className="relative min-h-screen bg-cover bg-[position:25%_center] md:bg-center flex items-start justify-center pt-16 touch-pan-y"
           style={{ backgroundImage: "url('/background4.png')" }}
         >
           <div className="absolute inset-0 bg-black/25"></div>
@@ -216,14 +255,13 @@ useEffect(() => {
           <div className="hidden md:block absolute top-20 left-20 text-3xl animate-pulse">✨</div>
           <div className="hidden md:block absolute top-40 right-32 text-2xl animate-bounce">⭐</div>
           <div className="hidden md:block absolute bottom-32 left-1/3 text-xl animate-ping">✦</div>
-          
 
           {/* Glühwürmchen */}
           <div className="hidden md:block absolute top-1/3 left-1/4 w-3 h-3 bg-yellow-200 rounded-full opacity-70 animate-pulse blur-[2px]"></div>
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[3px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-md bg-black/25 px-5 py-5 md:px-10 md:py-8 rounded-3xl w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade touch-pan-y">
+          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade touch-pan-y">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Deine Meinung zählt!
             </h2>
@@ -274,42 +312,65 @@ useEffect(() => {
 
       </div>
 
+
       {/* SECTION NAV */}
-        <div className="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-[9999] flex-col gap-5 bg-white/10 backdrop-blur-md px-3 py-4 rounded-full border border-white/20">
+      <div className="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-[9999] flex-col gap-5 bg-white/10 backdrop-blur-md px-3 py-4 rounded-full border border-white/20">
 
-          <div
-            className={`w-4 h-4 rounded-full transition duration-300 ${
-              activeSection === 1
-                ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
-                : "bg-white/40"
-            }`}
-          />
+        <div
+          className={`w-4 h-4 rounded-full transition duration-300 ${
+            activeSection === 1
+              ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
+              : "bg-white/40"
+          }`}
+        />
 
-          <div
-            className={`w-4 h-4 rounded-full transition duration-300 ${
-              activeSection === 2
-                ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
-                : "bg-white/40"
-            }`}
-          />
+        <div
+          className={`w-4 h-4 rounded-full transition duration-300 ${
+            activeSection === 2
+              ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
+              : "bg-white/40"
+          }`}
+        />
 
-          <div
-            className={`w-4 h-4 rounded-full transition duration-300 ${
-              activeSection === 3
-                ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
-                : "bg-white/40"
-            }`}
-          />
+        <div
+          className={`w-4 h-4 rounded-full transition duration-300 ${
+            activeSection === 3
+              ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
+              : "bg-white/40"
+          }`}
+        />
 
-          <div
-            className={`w-4 h-4 rounded-full transition duration-300 ${
-              activeSection === 4
-                ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
-                : "bg-white/40"
-            }`}
-          />
+        <div
+          className={`w-4 h-4 rounded-full transition duration-300 ${
+            activeSection === 4
+              ? "bg-yellow-200 shadow-[0_0_12px_rgba(255,255,200,0.9)]"
+              : "bg-white/40"
+          }`}
+        />
 
-        </div>
+      </div>
+
+
+      {/* MOBILE SECTION NAV */}
+      <div className="md:hidden fixed right-4 bottom-24 z-50 flex flex-col gap-2">
+
+        <button
+          onClick={() => scrollSection("up")}
+          className="w-11 h-11 flex items-center justify-center bg-black/50 backdrop-blur-md border border-white/20 rounded-full text-white text-2xl shadow-xl"
+          aria-label="Eine Seite nach oben"
+        >
+          ↑
+        </button>
+
+        <button
+          onClick={() => scrollSection("down")}
+          className="w-11 h-11 flex items-center justify-center bg-black/50 backdrop-blur-md border border-white/20 rounded-full text-white text-2xl shadow-xl"
+          aria-label="Eine Seite nach unten"
+        >
+          ↓
+        </button>
+
+      </div>
 
 
       {/* SOCIAL BAR */}
