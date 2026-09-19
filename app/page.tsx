@@ -154,7 +154,7 @@ export default function Home() {
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:mr-200 scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:mr-200 md:scroll-fade">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Fips
             </h2>
@@ -205,7 +205,7 @@ export default function Home() {
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:ml-150 scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:ml-150 md:scroll-fade">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Piko
             </h2>
@@ -261,7 +261,7 @@ export default function Home() {
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[3px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:scroll-fade">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Deine Meinung zählt!
             </h2>
