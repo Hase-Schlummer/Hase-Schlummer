@@ -80,7 +80,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-black overflow-x-hidden touch-pan-y">
+    <main className="bg-black overflow-x-hidden">
       <div className="w-full min-h-screen">
 
         {/* SECTION 1 */}
