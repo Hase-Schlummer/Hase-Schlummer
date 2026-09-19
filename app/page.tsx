@@ -86,7 +86,7 @@ export default function Home() {
         {/* SECTION 1 */}
         <section
           id="section1"
-          className="relative min-h-screen bg-cover bg-[position:25%_center] md:bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-[position:25%_center] xl:bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background.png')" }}
         >
           <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
@@ -102,7 +102,7 @@ export default function Home() {
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-3xl mx-auto md:mx-6 shadow-2xl md:ml-150 md:animate-fadeIn">
+          <div className="relative z-10 text-center text-white backdrop-blur-none xl:backdrop-blur-md bg-black/10 xl:bg-black/25 px-1 py-1 xl:px-10 xl:py-8 rounded-3xl w-[90%] md:w-[90%] md:max-w-3xl mx-auto xl:mx-6 shadow-2xl xl:ml-150 md:animate-fadeIn">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Hase Schlummer
             </h1>
@@ -120,8 +120,8 @@ export default function Home() {
             </p>
 
             <span className="md:hidden">
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-              </span>
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </span>
 
             <a
               href="https://open.spotify.com/show/5LG7hNPp05pUnwBzq43p4R"
@@ -138,7 +138,7 @@ export default function Home() {
         {/* SECTION 2 */}
         <section
           id="section2"
-          className="relative min-h-screen bg-cover bg-[position:65%_center] md:bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-[position:65%_center] xl:bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background2.png')" }}
         >
           <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
@@ -154,7 +154,7 @@ export default function Home() {
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:mr-200 md:scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-none xl:backdrop-blur-md bg-black/10 xl:bg-black/25 px-1 py-1 xl:px-10 xl:py-8 rounded-3xl w-[90%] md:w-[90%] md:max-w-2xl mx-auto xl:mx-6 shadow-2xl xl:mr-200 md:scroll-fade">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Fips
             </h2>
@@ -164,7 +164,6 @@ export default function Home() {
 
               Oft bringt er sich selbst in Schwierigkeiten —
               meistens aus Versehen.<br />
-
 
               Mal hängt er kopfüber an einem Ast,
               mal verirrt er sich mitten im dunklen Wald
@@ -189,7 +188,7 @@ export default function Home() {
         {/* SECTION 3 */}
         <section
           id="section3"
-          className="relative min-h-screen bg-cover bg-[position:40%_center] md:bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-[position:40%_center] xl:bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background3.png')" }}
         >
           <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
@@ -205,7 +204,7 @@ export default function Home() {
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[1px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:ml-150 md:scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-none xl:backdrop-blur-md bg-black/10 xl:bg-black/25 px-1 py-1 xl:px-10 xl:py-8 rounded-3xl w-[90%] md:w-[90%] md:max-w-2xl mx-auto xl:mx-6 shadow-2xl xl:ml-150 md:scroll-fade">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Piko
             </h2>
@@ -245,7 +244,7 @@ export default function Home() {
         {/* SECTION 4 */}
         <section
           id="section4"
-          className="relative min-h-screen bg-cover bg-[position:25%_center] md:bg-center flex items-start justify-center pt-16"
+          className="relative min-h-screen bg-cover bg-[position:25%_center] xl:bg-center flex items-start justify-center pt-16"
           style={{ backgroundImage: "url('/background4.png')" }}
         >
           <div className="absolute inset-0 bg-black/25"></div>
@@ -261,7 +260,7 @@ export default function Home() {
           <div className="hidden md:block absolute top-2/3 right-1/3 w-2 h-2 bg-yellow-100 rounded-full opacity-60 animate-ping blur-[3px]"></div>
           <div className="hidden md:block absolute bottom-1/4 left-1/2 w-4 h-4 bg-yellow-200 rounded-full opacity-50 animate-pulse blur-[3px]"></div>
 
-          <div className="relative z-10 text-center text-white backdrop-blur-none md:backdrop-blur-md bg-black/10 md:bg-black/25 px-1 py-1 md:px-10 md:py-8 rounded-3xl w-[70%] md:w-[90%] md:max-w-2xl mx-auto md:mx-6 shadow-2xl md:scroll-fade">
+          <div className="relative z-10 text-center text-white backdrop-blur-none xl:backdrop-blur-md bg-black/10 xl:bg-black/25 px-1 py-1 xl:px-10 xl:py-8 rounded-3xl w-[90%] md:w-[90%] md:max-w-2xl mx-auto xl:mx-6 shadow-2xl md:scroll-fade">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
               Deine Meinung zählt!
             </h2>
